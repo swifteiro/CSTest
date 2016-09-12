@@ -1,0 +1,35 @@
+PODS:
+  - Alamofire (3.4.1)
+  - Crashlytics (3.7.3):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.8)
+  - JSONHelper (2.1.0)
+  - Realm (1.0.2):
+    - Realm/Headers (= 1.0.2)
+  - Realm/Headers (1.0.2)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - SVProgressHUD (2.0.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - Crashlytics
+  - Fabric
+  - JSONHelper
+  - Realm
+  - SDWebImage
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  Crashlytics: 76f6beaff70acf226139582c09c78461597c2b98
+  Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
+  JSONHelper: 684a9ffd73578f370c0a02197319a97e37120124
+  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+
+PODFILE CHECKSUM: 082cf35faf1c5279dfd53f460bfa48f94dfdbfde
+
+COCOAPODS: 1.0.1
