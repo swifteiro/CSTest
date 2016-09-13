@@ -35,10 +35,17 @@ struct Request {
                     case .Success:
                         switch callType {
                         case .Repositories:
-                            if let results = response.result.value as? [AnyObject] {
-                                var repos = [RepositoriresModel]()
-                                results.forEach({if $0 is [String : AnyObject] { repos.append(RepositoriresModel(dictionary: $0 as! [String : AnyObject]))}})
-                                successBlock(repos)
+                            do {
+                                let results = try NSJSONSerialization.JSONObjectWithData(response.data!, options: NSJSONReadingOptions.MutableContainers) as AnyObject
+                                if let jsonResult = results as? Dictionary<String, AnyObject> {
+                                    if let items = jsonResult["items"] as? [AnyObject] {
+                                        var repos = [RepositoriresModel]()
+                                        items.forEach({if $0 is [String : AnyObject] { repos.append(RepositoriresModel(dictionary: $0 as! [String : AnyObject]))}})
+                                        successBlock(repos)
+                                    }
+                                }
+                            } catch {
+                                failureBlock("json error: \(error)")
                             }
                             break
                         case .Pulls:

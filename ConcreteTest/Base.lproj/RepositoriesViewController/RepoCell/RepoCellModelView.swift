@@ -18,5 +18,6 @@ class RepoCellModelView: NSObject, RepoCellRepresentation {
     func setCellSubtitle() -> String { return self.repos?.description ?? "" }
     func setForksCount() -> String { return self.repos?.forks_count ?? "" }
     func setStarsCount() -> String { return self.repos?.stargazers_count ?? "" }
+    func setUserName() -> String { return self.repos?.login ?? "" }
     func setImageProfileName() -> String { return self.repos?.avatar_url ?? "" }
 }

@@ -24,6 +24,7 @@ class RepoCell: UITableViewCell {
         self.cellSubtitle.text = cellProtocol.setCellSubtitle()
         self.forksCount.text = cellProtocol.setForksCount()
         self.starsCount.text = cellProtocol.setStarsCount()
+        self.userName.text = cellProtocol.setUserName()
         self.profileImg.sd_setImageWithURL(NSURL(string: cellProtocol.setImageProfileName()), placeholderImage:UIImage())
     }
 }

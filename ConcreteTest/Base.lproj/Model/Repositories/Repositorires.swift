@@ -22,10 +22,10 @@ class RepositoriresModel: Deserializable {
     required init(dictionary: [String : AnyObject]) {
         name                <-- dictionary["name"]
         full_name           <-- dictionary["full_name"]
-        login               <-- dictionary["owner.login"]
-        avatar_url          <-- dictionary["owner.avatar_url"]
+        login               <-- dictionary["owner"]?["login"]
+        avatar_url          <-- dictionary["owner"]?["avatar_url"]
         description         <-- dictionary["description"]
-        forks_count         <-- dictionary["forks_count"]
+        forks_count         <-- dictionary["forks"]
         stargazers_count    <-- dictionary["stargazers_count"]
     }
 }

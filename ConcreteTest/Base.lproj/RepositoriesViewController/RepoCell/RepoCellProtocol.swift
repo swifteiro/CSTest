@@ -13,5 +13,6 @@ protocol RepoCellRepresentation {
     func setCellSubtitle() -> String
     func setForksCount() -> String
     func setStarsCount() -> String
+    func setUserName() -> String
     func setImageProfileName() -> String
 }
